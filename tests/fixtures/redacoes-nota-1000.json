@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "source": "Cartilhas INEP — textos reais de redações nota 1000",
+    "prompt_version": "v1.5",
+    "nota": "ATENÇÃO: Este arquivo deve conter textos reais de redações nota 1000 publicados nas cartilhas do INEP. Não foram encontrados no repositório durante a configuração do test suite. Adicione pelo menos 3 redações antes de executar os testes IA-02 e IA-07.",
+    "instrucoes": "Formato de cada entrada: { id, ano_enem, tema, texto }. Os textos devem ser copiados integralmente das cartilhas INEP correspondentes. Fontes: https://www.gov.br/inep — seção Redação do ENEM — Cartilhas."
+  },
+  "redacoes": [
+  ]
+}

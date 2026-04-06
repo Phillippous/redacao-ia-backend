@@ -1,0 +1,241 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "source": "Plano de Redações Sintéticas v1.0",
+    "prompt_version": "v1.5",
+    "tolerance": 40,
+    "nota": "Cada redação foi construída com erros cirúrgicos conforme as fichas do plano. Os erros-alvo estão documentados no campo 'erros_alvo'."
+  },
+  "redacoes": [
+    {
+      "id": "G1-A",
+      "titulo": "Erros gramaticais sistemáticos + fuga ao tema",
+      "tema": "A invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+      "texto": "A participação feminina no mercado de trabalho brasileiro cresceu de forma expressiva nas últimas décadas, mas persiste uma profunda desigualdade que coloca as mulheres em posição de desvantagem em relação aos homens. A discriminação salarial e a dificuldade de ascensão nos cargos de liderança são problemas que exigem atenção urgente do Estado e da sociedade.\n\nUm dos principal fatores que perpetua essa injustiça é a diferença de remuneração entre gêneros. Dados do Instituto Brasileiro de Geografia e Estatística revelam que mulheres recebem, em média, 22% menos do que homens em ocupações equivalentes. Isso não pode ser atribuído exclusivamente à qualificação, uma vez que mesmo entre graduadas a disparidade se mantém. Empresas que adotam políticas de equidade costumam ser mais produtiva e atraentes para talentos qualificados, o que demonstra que investir em igualdade é também economicamente racional, beneficiando toda a cadeia produtiva.\n\nAlém disso, o avanço feminino nas hierarquias organizacionais é barrado pelo fenômeno do \"teto de vidro\". Levantamentos realizados há mais de uma décadas pelo Instituto Ethos mostram que mulheres ocupam menos de 14% das diretorias das maiores empresas brasileiras. Essa situação reflete preconceitos enraizados que tendem a associar liderança a características considerados exclusivamente masculinos, como a assertividade e a disponibilidade irrestrita. O resultado é uma cultura corporativa que subtrai da organização perspectivas e competências valiosas, prejudicando também a inovação.\n\nPortanto, é indispensável que medidas concretas sejam adotadas para superar essa realidade. O Ministério do Trabalho deve exigir que empresas com mais de cem funcionários publiquem relatórios anuais de equidade salarial, com metas de redução das disparidades previstas em lei. As organizações, por sua vez, devem implementar programas estruturado de aceleração de carreira voltado para mulheres em nível gerencial. Com essas ações combinadas, o Brasil poderá avançar rumo a um mercado de trabalho em que o mérito, e não o gênero, determine as trajetórias profissional.",
+      "gabarito": { "c1": 80, "c2": 0, "c3": 0, "c4": 120, "c5": 0, "total": 200 },
+      "erros_alvo": {
+        "c1_tipo": "concordância nominal e verbal (≥4 ocorrências)",
+        "erros": [
+          "Um dos principal fatores → principais",
+          "mais produtiva e atraentes → produtivas",
+          "mais de uma décadas → uma década",
+          "características considerados → consideradas",
+          "programas estruturado → estruturados",
+          "voltado para mulheres → voltados",
+          "trajetórias profissional → profissionais"
+        ],
+        "c2_tipo": "fuga ao tema — texto trata de desigualdade salarial e teto de vidro, sem desenvolver a invisibilidade do trabalho de cuidado"
+      },
+      "regras_especiais": ["cascata_c2_zero"],
+      "grupo": "G1",
+      "qa_cases": ["IA-03", "IA-04", "IA-06", "IA-10"]
+    },
+    {
+      "id": "G1-B",
+      "titulo": "Tangenciamento genuíno + argumentação fraca",
+      "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+      "texto": "A crise ambiental que assola o Brasil está intimamente associada à destruição dos territórios habitados por populações tradicionais. A expansão desordenada do agronegócio e a omissão do poder público representam ameaças à biodiversidade e ao equilíbrio ecossistêmico de regiões estratégicas como a Amazônia e o Cerrado.\n\nO avanço do desmatamento tem consequências devastadoras para o meio ambiente. A retirada da cobertura vegetal acelera processos de erosão, compromete bacias hidrográficas e contribui para o agravamento das mudanças climáticas. O Brasil, que possui uma das maiores biodiversidades do planeta, assiste a um processo sistemático de destruição que reduz sua capacidade de cumprir compromissos internacionais. Dados do Instituto Nacional de Pesquisas Espaciais mostram que o Brasil perdeu, nas últimas três décadas, uma área de vegetação nativa equivalente à superfície da Alemanha. Sem uma política eficaz de controle ambiental, o país arrisca perder recursos naturais que levaram milênios para se formar e descumprir os compromissos climáticos assumidos no Acordo de Paris.\n\nOs povos tradicionais, contudo, enfrentam desafios específicos para ter sua cultura valorizada nesse contexto. A medida que seus territórios são invadidos, línguas indígenas desaparecem e práticas de manejo sustentável se perdem. Comunidades quilombolas veem seus rituais e modos de vida ameaçados pela pressão do entorno. O Estado raramente reconhece esses saberes como patrimônio nacional, o que agrava o processo de apagamento cultural que acompanha a devastação territorial, tornando a valorização dessas comunidades cada vez mais urgente.\n\nÉ fundamental, portanto, que o Estado adote medidas integradas de proteção. O governo federal deve acelerar os processos de demarcação de terras indígenas e quilombolas, garantindo a segurança territorial como condição para a preservação cultural desses povos. As escolas nessas regiões devem desenvolver currículos interculturais elaborados em parceria com as comunidades, com apoio a transmissão de conhecimentos ancestrais, para que saberes milenares sejam preservados e repassados às novas gerações.",
+      "gabarito": { "c1": 120, "c2": 80, "c3": 80, "c4": 120, "c5": 120 , "total": 520 },
+      "erros_alvo": {
+        "c1_tipo": "erros de acentuação (2 ocorrências)",
+        "erros": [
+          "A medida que → À medida que (falta acento)",
+          "apoio a transmissão → à transmissão (crase omitida)"
+        ],
+        "c2_tipo": "tangenciamento genuíno — argumento central é a devastação ambiental; o parágrafo 3 menciona E desenvolve desafios de valorização cultural dos povos tradicionais, mas não como tema central da redação"
+      },
+      "regras_especiais": ["tangenciamento_c2_80"],
+      "grupo": "G1",
+      "qa_cases": ["IA-06", "IA-10"]
+    },
+    {
+      "id": "G1-C",
+      "titulo": "Domínio precário da norma culta + argumentação superficial",
+      "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+      "texto": "No contexto da transformação digital, as plataformas de redes sociais e aplicativos de consumo utilizam o controle de dados pessoais como principal instrumento de manipulação do comportamento humano. Ao coletar informações detalhadas sobre os usuários, essas empresas constroem perfis psicológicos que permitem direcionar conteúdos e anúncios de forma altamente eficaz, comprometendo a autonomia individual de forma crescente e muitas vezes imperceptível para o próprio usuário.\n\nOs algoritmos é desenvolvido para maximizar o tempo que o usuário passa conectado. Com base em dados de navegação, preferências de compra e interações sociais, as plataformas responsável por esses sistemas criam ambientes digitais personalizados que reforçam crenças preexistentes e estimulam comportamentos de consumo específicos. Esse processo, conhecido como \"bolha de filtro\", limita a diversidade de informações acessadas pelo usuário e restringe sua autonomia intelectual, fazendo com que decisões aparentemente livres sejam, na verdade, induzidas por estratégias algorítmicas construídas a partir de seus dados pessoais.\n\nAlém do controle comportamental, as grandes empresas de tecnologia acumulam quantidades massivos de dados que frequentemente vazam para terceiros ou são utilizados sem o conhecimento dos usuários. Escândalos como o da Cambridge Analytica revelaram o quanto informações pessoais podem ser exploradas para fins políticos e comerciais, colocando em risco a privacidade e a segurança das pessoas. Esse problema de segurança digital, embora relacionado ao controle de dados, aponta para uma dimensão mais ampla de risco sistêmico que transcende a manipulação comportamental direta.\n\nDiante desse cenário, é urgente que medidas regulatórias sejam adotadas. O Congresso Nacional deve fortalecer a Lei Geral de Proteção de Dados, criando mecanismos de fiscalização mais eficientes para coibir o uso indevido de informações pessoais pelas plataformas digitais. Paralelamente, o Ministério da Educação deve incluir na grade curricular do ensino médio campanha educativa voltado para o letramento digital crítico, capacitando os jovens a identificar e questionar as estratégias de manipulação algorítmica que permeiam seu cotidiano.",
+      "gabarito": { "c1": 80, "c2": 160, "c3": 80, "c4": 120, "c5": 120, "total": 560 },
+      "erros_alvo": {
+        "c1_tipo": "concordância nominal e verbal (≥4 ocorrências)",
+        "erros": [
+          "Os algoritmos é desenvolvido → são desenvolvidos",
+          "plataformas responsável → responsáveis",
+          "quantidades massivos → massivas",
+          "campanha educativa voltado → voltadas"
+        ],
+        "c2_tipo": "C2=160 — o parágrafo 3 trata de vazamento de dados e privacidade como questão central (tema adjacente), não de manipulação comportamental via controle de dados"
+      },
+      "regras_especiais": [],
+      "grupo": "G1",
+      "qa_cases": ["IA-06", "IA-10"]
+    },
+    {
+      "id": "G1-D",
+      "titulo": "Fuga ao tema sofisticada — texto de alta qualidade, tema errado",
+      "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+      "texto": "A dependência tecnológica que afeta bilhões de usuários contemporâneos não resulta de uma escolha individual consciente, mas de uma arquitetura meticulosamente projetada para capturar e reter a atenção humana. As grandes plataformas digitais, ao longo das últimas duas décadas, transformaram sistematicamente princípios da psicologia comportamental em recursos de design que exploram vulnerabilidades cognitivas profundas e universais do ser humano.\n\nO filósofo coreano Byung-Chul Han argumenta que a sociedade do desempenho, marcada pelo excesso de positividade e pela compulsão pela hiperatividade, encontra nas redes sociais seu ambiente mais propício. A lógica do scroll infinito, das notificações intermitentes e das recompensas variáveis — mecanismo análogo ao reforço intermitente descrito por B. F. Skinner em experimentos com animais — mantém o usuário em estado de antecipação constante. Cada nova postagem, curtida ou mensagem funciona como uma possível recompensa, ativando circuitos dopaminérgicos de modo semelhante ao que ocorre em comportamentos aditivos reconhecidos pela neurociência contemporânea.\n\nA dimensão coletiva desse fenômeno é igualmente preocupante. À medida que a atenção se fragmenta e a capacidade de concentração prolongada diminui, observa-se o enfraquecimento de competências cognitivas essenciais para a vida democrática — como a leitura crítica de textos longos e a deliberação racional sobre questões complexas. Pesquisas conduzidas por universidades norte-americanas indicam que o uso intenso de plataformas de vídeo curto está associado à redução significativa da janela atencional em adolescentes, com implicações sérias para o aprendizado formal.\n\nPortanto, compreender esse fenômeno exige reconhecer que a captura comportamental nas plataformas digitais opera, sobretudo, por meio do design de interfaces e da exploração de mecanismos psicológicos universais — não como uma anomalia, mas como o modelo de negócios dominante da economia da atenção. Enfrentá-lo requer tanto regulação quanto educação midiática, de modo que os usuários possam desenvolver maior consciência sobre os mecanismos que moldam seu comportamento online, reconstruindo sua agência intelectual.",
+      "gabarito": { "c1": 200, "c2": 0, "c3": 0, "c4": 160, "c5": 0, "total": 360 },
+      "erros_alvo": {
+        "c1_tipo": "nenhum erro — C1=200",
+        "erros": [],
+        "c2_tipo": "fuga ao tema sofisticada — texto de alta qualidade sobre economia da atenção e design de interfaces (Skinner, Byung-Chul Han) sem desenvolver o controle de dados como instrumento de manipulação; QUALITY INDEPENDENCE RULE aplicada"
+      },
+      "regras_especiais": ["cascata_c2_zero", "quality_independence_rule"],
+      "grupo": "G1",
+      "qa_cases": ["IA-03", "IA-04", "IA-06", "IA-10"]
+    },
+    {
+      "id": "G2-A",
+      "titulo": "Argumentação fraca + proposta ausente",
+      "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+      "texto": "O estigma relacionado às doenças mentais é um problema grave que afeta milhões de brasileiros, impedindo que esses indivíduos busquem tratamento e levando ao agravamento de condições que poderiam ser tratadas precocemente. A desinformação da sociedade sobre transtornos psíquicos perpetua preconceitos que causam sofrimento real e desnecessário. Segundo a Organização Mundial da Saúde, o Brasil possui a maior prevalência de transtornos de ansiedade do mundo, o que torna o enfrentamento do estigma uma prioridade inadiável de saúde pública.\n\nO desconhecimento sobre a natureza das doenças mentais faz com que portadores de transtornos como depressão, ansiedade e esquizofrenia sejam tratados como moralmente fracos ou perigosos. Essa percepção equivocada leva muitos pacientes a esconder seus diagnósticos no ambiente de trabalho e nas relações sociais, agravando o isolamento e dificultando o acesso ao cuidado. É importante que a sociedade compreenda que doenças mentais são condições médicas reconhecidas e que têm tratamento eficaz, assim como ocorre com qualquer outra doença do corpo humano.\n\nA fragilidade do sistema público de saúde também representa um obstáculo a nível nacional. Hospitais e Unidades Básicas de Saúde não dispõem de profissionais suficientes para atender a demanda por saúde mental, e o financiamento do Sistema Único de Saúde tem sido sistematicamente reduzido nas últimas décadas. Esse problema de infraestrutura dificulta o acesso aos serviços e mantém a população vulnerável, independentemente do estigma que possam enfrentar em seus contextos sociais. O subfinanciamento crônico da saúde mental no SUS, que recebe menos de 4% do orçamento total da saúde, contrasta com a magnitude do problema e exige resposta imediata.\n\nPortanto, é essencial que o governo invista mais em saúde mental no Brasil. Apenas assim será possível garantir que os cidadãos tenham acesso ao cuidado de que precisam e possam viver de forma plena e digna, sem sofrer discriminação por causa de seus diagnósticos ou de sua condição de saúde. A sociedade precisa mudar sua visão sobre esses transtornos para que o problema seja efetivamente enfrentado.",
+      "gabarito": { "c1": 160, "c2": 160, "c3": 80, "c4": 120, "c5": 40, "total": 560 },
+      "erros_alvo": {
+        "c1_tipo": "desvio de regência (1-2 ocorrências)",
+        "erros": [
+          "a nível nacional → em nível nacional (regência inadequada)"
+        ],
+        "c2_tipo": "C2=160 — parágrafo 3 tem como argumento central a crise de financiamento do SUS (tema adjacente), não o estigma especificamente",
+        "c3_tipo": "C3=80 — argumentação predominantemente genérica ('É importante que a sociedade compreenda...', 'a sociedade precisa mudar sua visão'); ausência de dados ou evidências específicas",
+        "c5_tipo": "C5=40 — proposta extremamente vaga: 'o governo invista mais em saúde mental'; apenas 1-2 elementos do checklist identificáveis (agente genérico + efeito vago); meio/modo completamente ausente"
+      },
+      "regras_especiais": [],
+      "grupo": "G2",
+      "qa_cases": ["IA-06", "IA-10"]
+    },
+    {
+      "id": "G2-B",
+      "titulo": "Coesão quebrada + proposta incompleta",
+      "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+      "texto": "O estigma associado às doenças mentais na sociedade brasileira manifesta-se de formas diversas, desde o preconceito velado no ambiente de trabalho até a recusa de familiares em reconhecer a gravidade de um transtorno. Essa realidade invisível impõe sofrimento desnecessário a milhões de brasileiros que poderiam se beneficiar de tratamento adequado.\n\nQuando portadores de transtornos mentais revelam seus diagnósticos, frequentemente enfrentam desconfiança, afastamento social e discriminação. A depressão, por exemplo, é muitas vezes interpretada como fraqueza de caráter, e o transtorno bipolar gera temor mesmo entre pessoas próximas. Portanto, as doenças mentais são mais comuns do que a maioria das pessoas imagina, afetando cerca de 12% da população brasileira de acordo com estimativas do Ministério da Saúde, o que demonstra a urgência de políticas voltadas ao tema. Esse dado contrasta com a percepção popular de que transtornos mentais são raros, evidenciando o quanto o estigma distorce a realidade.\n\nO sistema de saúde enfrenta dificuldade para atender a essa demanda reprimida. Centros de Atenção Psicossocial estão sobrecarregados em muitas cidades, e muitos municípios de pequeno porte não dispõem de nenhum serviço especializado em saúde mental. Profissionais de saúde relatam falta de recurso para oferecer atendimento adequado. No entanto, é fundamental que o poder público amplie o investimento em saúde mental para reduzir os danos causados pelo estigma. A formação continuados de professores, médicos e agentes comunitários de saúde para reconhecer e acolher casos de transtorno mental pode representar uma estratégia relevante.\n\nO governo federal e as secretarias estaduais de saúde devem implementar programas de combate ao estigma, com foco em campanhas educativas nos ambientes de trabalho e nas escolas. Além disso, é necessário ampliar a cobertura dos Centros de Atenção Psicossocial nas regiões com maior déficit de atendimento. Apenas assim será possível construir uma sociedade mais inclusiva, na qual as pessoas com transtornos mentais possam buscar ajuda sem medo de julgamento ou discriminação.",
+      "gabarito": { "c1": 160, "c2": 160, "c3": 120, "c4": 80, "c5": 80, "total": 600 },
+      "erros_alvo": {
+        "c1_tipo": "concordância nominal (1-2 ocorrências)",
+        "erros": [
+          "falta de recurso → recursos (concordância nominal)",
+          "formação continuados → continuada (concordância nominal)"
+        ],
+        "c2_tipo": "C2=160 — parágrafo 3 tem como argumento central a sobrecarga do sistema de saúde (adjacente ao estigma), mas o tema domina a redação",
+        "c4_tipo": "C4=80 — 2 conectivos logicamente incorretos: (1) 'Portanto, as doenças mentais são mais comuns...' — o 'portanto' não decorre logicamente do argumento anterior sobre discriminação; (2) 'No entanto, é fundamental que o poder público amplie o investimento' — 'no entanto' conecta ideias que não se contrapõem (sobrecarga do sistema → necessidade de investimento é uma relação causal, não de contraste)",
+        "c5_tipo": "C5=80 — proposta com apenas 2-3 elementos: ação (implementar programas) + agente (governo federal e secretarias); meio/modo completamente ausente; efeito vago ('sociedade mais inclusiva'); sem detalhamento"
+      },
+      "regras_especiais": ["conectivo_incorreto_c4_80"],
+      "grupo": "G2",
+      "qa_cases": ["IA-06", "IA-10"]
+    },
+    {
+      "id": "G2-C",
+      "titulo": "Boa argumentação, coesão e proposta deficientes",
+      "tema": "Desafios para a valorização da herança africana no Brasil",
+      "texto": "A herança africana constitui um dos pilares fundamentais da identidade cultural brasileira, mas permanece sistematicamente subvalorizada tanto nas instituições de ensino quanto no imaginário social dominante. Superar essa omissão exige reconhecer que o legado afro-brasileiro vai muito além da culinária e das festas populares — abrange filosofias, tecnologias agrícolas, sistemas jurídicos e práticas medicinais que moldaram profundamente a civilização brasileira.\n\nA historiografia oficial, durante séculos, relegou as contribuições africanas à condição de subalternas ou as apagou completamente. Pesquisas indicam que livros didáticos distribuídos pelo governo federal até os anos 1990 apresentavam povos africanos predominantemente como escravizados, sem reconhecer a complexidade das civilizações do Benim, de Mali ou do Congo. A Lei 10.639/2003, que tornou obrigatório o ensino de história e cultura afro-brasileira nas escolas, foi um avanço significativo, mas pesquisas do setor educacional revelam que sua implementações ainda é profundamente desigual em todo o território nacional, especialmente nas regiões Norte e Centro-Oeste, onde os índices de cumprimento efetivo da lei permanecem os mais baixos do país.\n\nEntretanto, é igualmente importante considerar o papel dos espaços culturais nesse processo de valorização. Museus como o Museu Afro Brasil, em São Paulo, têm demonstrado que é possível apresentar esse legado com profundidade e rigor histórico, rompendo estereótipos consolidados. Portanto, grande parte da população brasileira ainda desconhece figuras fundamentais como Abdias do Nascimento, Lélia Gonzalez e Beatriz Nascimento, o que evidencia a necessidade de ampliar o alcance dessas iniciativas para além dos grandes centros urbanos.\n\nPara enfrentar esse desafio, o Estado brasileiro deve agir de forma sistemática. O Ministério da Educação e as secretarias estaduais de cultura devem garantir a efetiva implementação da Lei 10.639/2003 em todos os municípios. Além disso, o poder público deve ampliar o financiamento para museus e projetos de preservação da memória afro-brasileira, promovendo uma sociedade mais consciente de sua herança plural.",
+      "gabarito": { "c1": 160, "c2": 160, "c3": 160, "c4": 80, "c5": 80, "total": 640 },
+      "erros_alvo": {
+        "c1_tipo": "concordância nominal (1 ocorrência)",
+        "erros": [
+          "sua implementações ainda é desigual → implementação (concordância nominal)"
+        ],
+        "c2_tipo": "C2=160 — parágrafo 3 tem como argumento central o papel dos espaços culturais e museus (adjacente ao tema principal), mas a valorização da herança africana domina a redação",
+        "c3_tipo": "C3=160 — argumentação bem desenvolvida: citação da Lei 10.639/2003, referências a civilizações africanas (Benim, Mali, Congo), exemplos de figuras (Abdias do Nascimento, Lélia Gonzalez), Museu Afro Brasil",
+        "c4_tipo": "C4=80 — 2 conectivos logicamente incorretos: (1) 'Entretanto, é igualmente importante considerar o papel dos espaços culturais' — 'entretanto' conecta o argumento sobre a lei e livros didáticos ao argumento sobre museus, que não se contrapõem; (2) 'Portanto, grande parte da população ainda desconhece figuras fundamentais' — 'portanto' não decorre logicamente da afirmação anterior sobre museus demonstrarem que é possível apresentar bem o legado",
+        "c5_tipo": "C5=80 — proposta com 2-3 elementos: ação (garantir implementação da lei + ampliar financiamento) + agente (Ministério da Educação, secretarias); meio/modo completamente ausente; sem detalhamento de como a implementação será garantida"
+      },
+      "regras_especiais": ["conectivo_incorreto_c4_80"],
+      "grupo": "G2",
+      "qa_cases": ["IA-06", "IA-10"]
+    },
+    {
+      "id": "G2-D",
+      "titulo": "Argumentação sem evidências + proposta violadora de direitos humanos",
+      "tema": "Segurança pública e violência urbana no Brasil",
+      "texto": "A crescente violência urbana no Brasil revela a falência do modelo de segurança pública vigente. Cidades de todo o país registram índices alarmantes de homicídios, roubos e crimes violentos que comprometem a qualidade de vida da população e geram um clima generalizado de insegurança. Diante desse cenário, torna-se indispensável repensar profundamente as políticas de segurança do país.\n\nUm dos problemas centrais é a impunidade que impera no sistema judicial brasileiro, alimentada pela lentidão dos processos penais e pela superlotação do sistema carcerário. Quando criminosos são presos, o processo se arrasta por anos e muitos aguardam julgamento em liberdade, o que desgasta a credibilidade da justiça. Isso desestimula a denúncia por parte das vítimas e enfraquece a confiança da sociedade no sistema de justiça. É fundamental que o Estado adote uma postura mais firme e eficiente para garantir que crimes graves não fiquem sem resposta adequada. A percepção generalizada de impunidade alimenta o ciclo de violência e contribui para o aumento dos índices criminais nas grandes cidades.\n\nAlém disso, a falta de policiamento nas periferias e a precariedade dos sistemas de vigilância urbana facilitam a ação de criminosos. As comunidades mais vulneráveis são as que mais sofrem com a ausência do Estado, o que evidencia que a segurança pública no Brasil é também uma questão de desigualdade social. Portanto, o investimento em segurança deve ser urgentemente priorizado, especialmente nas regiões mais afetadas pela violência e pelo abandono estatal.\n\nPara enfrentar a violência urbana de forma efetiva, o governo federal deve criar varas criminais especializadas em crimes violentos, nas quais os processos sejam acelerados por meio da supressão do duplo grau de jurisdição obrigatório e da suspensão da presunção de inocência para réus com mais de dois antecedentes criminais registrados. Essa medida garantiria julgamentos mais rápidos e eficientes, reduzindo significativamente a impunidade e devolvendo à população a confiança no sistema de justiça brasileiro.",
+      "gabarito": { "c1": 160, "c2": 160, "c3": 80, "c4": 120, "c5": 0, "total": 520 },
+      "erros_alvo": {
+        "c1_tipo": "concordância verbal (1 ocorrência)",
+        "erros": [
+          "Cidades de todo o país registram índices... que compromete → comprometem (concordância — sujeito plural 'homicídios, roubos e crimes' requer verbo no plural)"
+        ],
+        "c2_tipo": "C2=160 — parágrafo 3 trata a desigualdade social como argumento central (adjacente ao tema segurança pública), mas a segurança domina a redação",
+        "c3_tipo": "C3=80 — argumentação predominantemente genérica: 'impunidade que impera', 'Estado deve adotar postura mais firme'; sem dados, sem exemplos específicos, sem evidências",
+        "c5_tipo": "C5=0 — violação de direitos humanos (RULE 5): a proposta elimina explicitamente o duplo grau de jurisdição (direito ao recurso) e suspende a presunção de inocência para réus com antecedentes, o que constitui violação de garantias processuais constitucionais — independentemente da forma como é apresentada"
+      },
+      "regras_especiais": ["violacao_direitos_humanos_c5_zero"],
+      "grupo": "G2",
+      "qa_cases": ["IA-08", "IA-06", "IA-10"]
+    },
+    {
+      "id": "G3-A",
+      "titulo": "Redação mediana uniforme — Nível 120 em tudo",
+      "tema": "A invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+      "texto": "O trabalho de cuidado realizado pelas mulheres brasileiras, que inclui a criação dos filhos, os cuidados com idosos e as tarefas domésticas cotidianas, permanece invisível tanto para a sociedade quanto para o Estado. Essa invisibilidade tem raízes culturais profundas e gera consequências que afetam toda a população.\n\nAs tarefas domésticas é invisível economicamente porque não são contabilizadas no Produto Interno Bruto, embora representem uma contribuição essencial para o funcionamento da sociedade. Dados da Pesquisa Nacional por Amostra de Domicílios indicam que as mulheres dedicam, em média, o dobro do tempo que os homens às atividades domésticas — diferença que, se remunerada, corresponderia a mais de 11% do PIB nacional, segundo o IPEA. Mesmo quando atuam no mercado de trabalho formal, elas continuam responsáveis pela maior parte dessas tarefas, o que configura jornadas duplas que esgotam sua energia e limitam suas possibilidades de desenvolvimento profissional e pessoal. Esse acúmulo de responsabilidades é uma das principais causas de abandono feminino do mercado de trabalho após a maternidade.\n\nAlém disso, as mulheres enfrentam discriminação no mercado de trabalho formal. A desigualdade salarial entre homens e mulheres é uma realidade documentada, e muitas profissionais são preteridas em promoções por causa da maternidade. Essa situação, somada a nível doméstico às jornadas exaustivas de cuidado, impede que as mulheres se desenvolvam plenamente como cidadãs e como profissionais, aprofundando desigualdades estruturais que deveriam ser enfrentadas pela sociedade como um todo.\n\nPortanto, é fundamental que o Estado reconheça e valorize o trabalho de cuidado. O governo federal deve implementar políticas públicas de redistribuição do cuidado, como a ampliação de creches e centros de apoio a idosos, por meio de programas financiados pelo poder público em parceria com municípios. Essas medidas devem ser acompanhadas de campanhas de conscientização que promovam a divisão equitativa das responsabilidades domésticas entre homens e mulheres, transformando assim a cultura que sustenta a invisibilidade do trabalho de cuidado no Brasil.",
+      "gabarito": { "c1": 120, "c2": 120, "c3": 120, "c4": 120, "c5": 120, "total": 600 },
+      "erros_alvo": {
+        "c1_tipo": "concordância verbal e de regência (2-3 ocorrências — padrão sistemático sem atingir C1=80)",
+        "erros": [
+          "As tarefas domésticas é invisível → são invisíveis (concordância verbal e nominal)",
+          "somada a nível doméstico → em nível doméstico (regência inadequada)"
+        ],
+        "c2_tipo": "C2=120 — tema desenvolvido com elementos tangenciais significativos: parágrafo 3 tem como argumento central a discriminação no mercado de trabalho (adjacente, não o mesmo que invisibilidade do trabalho de cuidado)",
+        "c5_tipo": "C5=120 — 4 elementos presentes (ação, agente, efeito, e meio/modo parcial via 'programas financiados'); detalhamento suficiente mas não aprofundado"
+      },
+      "regras_especiais": [],
+      "grupo": "G3",
+      "qa_cases": ["IA-06", "IA-10"]
+    },
+    {
+      "id": "G3-B",
+      "titulo": "Redação mediana uniforme — Nível 120 em tudo",
+      "tema": "Desafios para a valorização de comunidades e povos tradicionais no Brasil",
+      "texto": "Os povos tradicionais do Brasil — indígenas, quilombolas, ribeirinhos e caiçaras — carregam saberes que contribui para a preservação ambiental e para a diversidade cultural do país. No entanto, esses grupos enfrentam desafios profundos que ameaçam tanto sua sobrevivência física quanto a transmissão de sua herança cultural às gerações futuras.\n\nA invasão de territórios é um dos problemas mais graves que afetam as comunidades que vive em áreas demarcadas ou em processo de demarcação. Fazendeiros, garimpeiros e grileiros avançam sobre terras protegidas sem que o Estado ofereça resposta efetiva. A violência contra lideranças indígenas e quilombolas cresceu na última década, segundo organizações de defesa dos direitos dessas comunidades. Sem segurança territorial, torna-se quase impossível preservar os modos de vida e os conhecimentos ancestrais que constituem a identidade desses povos.\n\nAlém disso, a falta de políticas educacionais específicas compromete a transmissão das culturas tradicionais. As escolas localizadas em territórios indígenas e quilombolas frequentemente adotam currículos genéricos que não contemplam as línguas, as histórias e as práticas culturais locais. A pressão da cultura de massa exercida pelos meios de comunicação também leva os jovens a abandonar suas tradições. Estudos do Instituto Socioambiental indicam que mais de 60% dos jovens indígenas que migram para centros urbanos perdem o domínio ativo de sua língua materna em menos de uma geração. Essa dupla pressão — escolar e midiática — acelera um processo de assimilação que enfraquece a identidade coletiva dessas comunidades, tornando urgente uma intervenção do Estado.\n\nPortanto, o Estado deve agir de modo coordenado. O Ministério dos Povos Indígenas e a Fundação Cultural Palmares devem apoiar projetos de educação intercultural, com currículos elaborados em parceria com as próprias comunidades, garantindo que as línguas e práticas tradicionais sejam valorizadas. Além disso, é necessário acelerar os processos de demarcação territorial para assegurar a base material da sobrevivência cultural desses povos, preservando a diversidade do Brasil.",
+      "gabarito": { "c1": 120, "c2": 120, "c3": 120, "c4": 120, "c5": 120, "total": 600 },
+      "erros_alvo": {
+        "c1_tipo": "concordância verbal (2 ocorrências — padrão sistemático sem atingir C1=80)",
+        "erros": [
+          "saberes que contribui para → contribuem",
+          "comunidades que vive em áreas → vivem"
+        ],
+        "c2_tipo": "C2=120 — tema desenvolvido com elementos tangenciais significativos: parágrafo 2 foca principalmente na segurança territorial e violência (adjacente, não o mesmo que valorização cultural)",
+        "c5_tipo": "C5=120 — 4 elementos presentes: ação (apoiar projetos de educação intercultural + demarcação), agente (Ministério dos Povos Indígenas, Fundação Cultural Palmares), efeito (preservar diversidade); meio/modo vago mas identificável ('currículos elaborados em parceria com as comunidades')"
+      },
+      "regras_especiais": [],
+      "grupo": "G3",
+      "qa_cases": ["IA-06", "IA-10"]
+    },
+    {
+      "id": "G3-C",
+      "titulo": "Redação mediana uniforme — Nível 120 em tudo",
+      "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+      "texto": "No cenário da economia digital, as grandes plataformas de tecnologia utilizam o controle de dados pessoais para influenciar as decisões e os comportamentos de seus usuários de forma pouco transparente. Esse processo representa uma ameaça crescente à autonomia individual e ao exercício pleno da cidadania em uma sociedade democrática.\n\nAo coletar informações sobre hábitos de navegação, preferências de consumo e interações sociais, as empresas de tecnologia constroem perfis detalhados de cada usuário. Com base nesses perfis, algoritmos decide quais conteúdos serão exibidos, em que ordem e com qual frequência. Esse mecanismo direciona o comportamento dos usuários de forma sutil mas eficaz — estimulando compras, moldando opiniões políticas e amplificando conteúdos que geram engajamento emocional em detrimento de informações equilibradas e relevantes para o debate público. Pesquisadores estimam que algoritmos de recomendação aumentam o tempo médio de consumo nas plataformas em até 70%, evidenciando o impacto direto do controle de dados sobre o comportamento humano.\n\nEntretanto, o poder concentrado nas mãos de poucas empresas tecnológicas também levanta questões sobre livre concorrência e regulação de mercado. Empresas como Google e Meta controlam parcelas enormes do mercado digital global, o que dificulta o surgimento de alternativas que respeitem mais a privacidade dos usuários. Esse monopólio tecnológico é um problema estrutural que vai além da manipulação comportamental, dificultando a criação de soluções que devolvam autonomia ao usuário.\n\nDiante desse cenário, é essencial que o Brasil adote medidas robustas de regulação. O Congresso Nacional deve fortalecer a Lei Geral de Proteção de Dados, incluindo a obrigatoriedade de que plataformas ofereçam ao usuário a opção de recusar a coleta de dados comportamentais a nível individual. Ao mesmo tempo, o Ministério da Educação deve implementar campanhas de educação digital nas escolas, formando cidadãos capazes de compreender e questionar os mecanismos de manipulação algorítmica que permeiam sua vida cotidiana.",
+      "gabarito": { "c1": 120, "c2": 120, "c3": 120, "c4": 120, "c5": 120, "total": 600 },
+      "erros_alvo": {
+        "c1_tipo": "concordância verbal e de regência (2 ocorrências — padrão sistemático sem atingir C1=80)",
+        "erros": [
+          "algoritmos decide quais conteúdos → decidem",
+          "a nível individual → em nível individual (regência)"
+        ],
+        "c2_tipo": "C2=120 — tema desenvolvido com elementos tangenciais significativos: parágrafo 3 tem como argumento central o monopólio tecnológico e livre concorrência (adjacente à manipulação por controle de dados)",
+        "c5_tipo": "C5=120 — 4 elementos presentes: ação (fortalecer LGPD + educação digital), agente (Congresso Nacional, Ministério da Educação); meio/modo parcial ('obrigatoriedade de que plataformas ofereçam opção de recusar coleta'); efeito vago"
+      },
+      "regras_especiais": [],
+      "grupo": "G3",
+      "qa_cases": ["IA-06", "IA-10"]
+    },
+    {
+      "id": "G3-D",
+      "titulo": "Redação mediana uniforme — Nível 120 em tudo",
+      "tema": "O estigma associado às doenças mentais na sociedade brasileira",
+      "texto": "O estigma associado às doenças mentais representa um obstáculo significativo para o acesso ao tratamento e para a integração social de milhões de brasileiros. Preconceitos arraigados na cultura levam muitas pessoas a evitar buscar ajuda, agravando condições que, se tratadas precocemente, teriam prognósticos muito mais favoráveis para o paciente e para a sociedade.\n\nA principal consequência do estigma é o silêncio. Muitos portadores de transtornos como depressão, transtorno bipolar ou ansiedade generalizada preferem esconder seus diagnósticos por medo de discriminação no trabalho, na família ou nos círculos sociais. Estudos da Fiocruz indica que menos de 30% das pessoas com transtornos mentais graves no Brasil recebem algum tipo de tratamento adequado. Essa lacuna revela que o problema não é apenas de disponibilidade de serviços, mas de barreiras culturais que impedem a procura por ajuda. O estigma age como um filtro invisível que bloqueia o acesso ao tratamento mesmo quando os serviços estão disponíveis, criando um ciclo de sofrimento evitável que se perpetua por gerações.\n\nAlém disso, o sistema público de saúde enfrenta uma crise estrutural que agrava a situação. Os Centros de Atenção Psicossocial estão distribuídos de forma desigual no território nacional, e muitos municípios de pequeno e médio porte não dispõem de nenhum equipamento voltado para a saúde mental. O subfinanciamento do SUS limita a capacidade de oferecer atendimento a toda a população que necessita, comprometendo os avanços possíveis no combate ao estigma.\n\nPortanto, é fundamental que o Estado implemente políticas abrangentes. O Ministério da Saúde deve ampliar os recursos destinados a saúde mental, priorizando a expansão dos CAPS nas regiões com maior déficit de cobertura. Em paralelo, o governo deve lançar campanhas de conscientização sobre transtornos mentais em escolas e ambientes de trabalho, por meio de parcerias com organizações da sociedade civil, para que o estigma seja gradualmente substituído por empatia e acolhimento.",
+      "gabarito": { "c1": 120, "c2": 120, "c3": 120, "c4": 120, "c5": 120, "total": 600 },
+      "erros_alvo": {
+        "c1_tipo": "concordância verbal e de regência (2 ocorrências — padrão sistemático sem atingir C1=80)",
+        "erros": [
+          "Estudos da Fiocruz indica → indicam (concordância verbal)",
+          "recursos destinados a saúde mental → à saúde mental (crase omitida)"
+        ],
+        "c2_tipo": "C2=120 — tema desenvolvido com elementos tangenciais significativos: parágrafo 3 tem como argumento central o subfinanciamento do SUS (adjacente ao estigma, mas não o mesmo problema)",
+        "c5_tipo": "C5=120 — 5 elementos presentes mas parcialmente desenvolvidos: ação (ampliar CAPS + campanhas), agente (Ministério da Saúde + governo), meio/modo ('por meio de parcerias com organizações da sociedade civil'), efeito ('estigma substituído por empatia'), detalhamento ('regiões com maior déficit de cobertura')"
+      },
+      "regras_especiais": [],
+      "grupo": "G3",
+      "qa_cases": ["IA-06", "IA-10"]
+    }
+  ]
+}

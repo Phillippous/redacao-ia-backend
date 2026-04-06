@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "source": "Extraídas de G1-A e G1-D do fixture de redações sintéticas",
+    "prompt_version": "v1.5",
+    "nota": "Casos de fuga ao tema (C2=0) para testes de detecção de fuga e regra de cascata."
+  },
+  "redacoes": [
+    {
+      "id": "NZ-01",
+      "origem": "G1-A",
+      "tipo": "fuga_ao_tema_com_erros_gramaticais",
+      "tema": "A invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+      "texto": "A participação feminina no mercado de trabalho brasileiro cresceu de forma expressiva nas últimas décadas, mas persiste uma profunda desigualdade que coloca as mulheres em posição de desvantagem em relação aos homens. A discriminação salarial e a dificuldade de ascensão nos cargos de liderança são problemas que exigem atenção urgente do Estado e da sociedade.\n\nUm dos principal fatores que perpetua essa injustiça é a diferença de remuneração entre gêneros. Dados do Instituto Brasileiro de Geografia e Estatística revelam que mulheres recebem, em média, 22% menos do que homens em ocupações equivalentes. Isso não pode ser atribuído exclusivamente à qualificação, uma vez que mesmo entre graduadas a disparidade se mantém. Empresas que adotam políticas de equidade costumam ser mais produtiva e atraentes para talentos qualificados, o que demonstra que investir em igualdade é também economicamente racional, beneficiando toda a cadeia produtiva.\n\nAlém disso, o avanço feminino nas hierarquias organizacionais é barrado pelo fenômeno do \"teto de vidro\". Levantamentos realizados há mais de uma décadas pelo Instituto Ethos mostram que mulheres ocupam menos de 14% das diretorias das maiores empresas brasileiras. Essa situação reflete preconceitos enraizados que tendem a associar liderança a características considerados exclusivamente masculinos, como a assertividade e a disponibilidade irrestrita. O resultado é uma cultura corporativa que subtrai da organização perspectivas e competências valiosas, prejudicando também a inovação.\n\nPortanto, é indispensável que medidas concretas sejam adotadas para superar essa realidade. O Ministério do Trabalho deve exigir que empresas com mais de cem funcionários publiquem relatórios anuais de equidade salarial, com metas de redução das disparidades previstas em lei. As organizações, por sua vez, devem implementar programas estruturado de aceleração de carreira voltado para mulheres em nível gerencial. Com essas ações combinadas, o Brasil poderá avançar rumo a um mercado de trabalho em que o mérito, e não o gênero, determine as trajetórias profissional.",
+      "gabarito_esperado": { "c2": 0, "c3": 0, "c5": 0 },
+      "descricao": "Fuga ao tema: texto sobre desigualdade salarial e teto de vidro, não sobre invisibilidade do trabalho de cuidado. Também tem erros gramaticais (C1=80)."
+    },
+    {
+      "id": "NZ-02",
+      "origem": "G1-D",
+      "tipo": "fuga_ao_tema_sofisticada",
+      "tema": "Manipulação do comportamento do usuário pelo controle de dados na internet",
+      "texto": "A dependência tecnológica que afeta bilhões de usuários contemporâneos não resulta de uma escolha individual consciente, mas de uma arquitetura meticulosamente projetada para capturar e reter a atenção humana. As grandes plataformas digitais transformaram princípios da psicologia comportamental em recursos de design que exploram vulnerabilidades cognitivas fundamentais.\n\nO filósofo coreano Byung-Chul Han argumenta que a sociedade do desempenho, marcada pelo excesso de positividade e pela compulsão pela hiperatividade, encontra nas redes sociais seu ambiente mais propício. A lógica do scroll infinito, das notificações intermitentes e das recompensas variáveis — mecanismo análogo ao reforço intermitente descrito por B. F. Skinner em experimentos com animais — mantém o usuário em estado de antecipação constante. Cada nova postagem, curtida ou mensagem funciona como uma possível recompensa, ativando circuitos dopaminérgicos de modo semelhante ao que ocorre em comportamentos aditivos reconhecidos pela neurociência contemporânea.\n\nA dimensão coletiva desse fenômeno é igualmente preocupante. À medida que a atenção se fragmenta e a capacidade de concentração prolongada diminui, observa-se o enfraquecimento de competências cognitivas essenciais para a vida democrática — como a leitura crítica de textos longos e a deliberação racional sobre questões complexas. Pesquisas conduzidas por universidades norte-americanas indicam que o uso intenso de plataformas de vídeo curto está associado à redução significativa da janela atencional em adolescentes, com implicações sérias para o aprendizado formal.\n\nPortanto, compreender esse fenômeno exige reconhecer que a captura comportamental nas plataformas digitais opera, sobretudo, por meio do design de interfaces e da exploração de mecanismos psicológicos universais — não como uma anomalia, mas como o modelo de negócios dominante da economia da atenção. Enfrentá-lo requer tanto regulação quanto educação midiática, de modo que os usuários possam desenvolver maior consciência sobre os mecanismos que moldam seu comportamento online, reconstruindo sua agência intelectual.",
+      "gabarito_esperado": { "c2": 0, "c3": 0, "c5": 0 },
+      "descricao": "Fuga ao tema sofisticada (QUALITY INDEPENDENCE RULE): texto excelente sobre economia da atenção via design de interfaces (Skinner, Byung-Chul Han), sem desenvolver o controle de dados como mecanismo de manipulação. C1=200, C4=160."
+    }
+  ]
+}

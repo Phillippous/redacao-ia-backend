@@ -1,0 +1,23 @@
+{
+  "name": "redacao-ia-backend",
+  "version": "1.0.0",
+  "description": "Backend API for AI-powered ENEM essay correction",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node tests/run-qa.js",
+    "test:ia": "node --test tests/qa-vermelha-ia.test.js",
+    "test:auth": "node --test tests/qa-amarela-auth.test.js",
+    "test:rate": "node --test tests/qa-amarela-ratelimit.test.js",
+    "test:lgpd": "node --test tests/qa-amarela-lgpd.test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@supabase/supabase-js": "^2.49.4",
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0"
+  }
+}

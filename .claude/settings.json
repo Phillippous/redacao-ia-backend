@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmd.exe /c \"npm init -y && npm install express @supabase/supabase-js @anthropic-ai/sdk dotenv express-rate-limit\")",
+      "Bash(cmd.exe /c \"cd /d C:\\\\Users\\\\rael_\\\\OneDrive\\\\Desktop\\\\redacao-ia-backend && npm install 2>&1\")",
+      "Bash(powershell.exe -Command \"Set-Location ''C:\\\\Users\\\\rael_\\\\OneDrive\\\\Desktop\\\\redacao-ia-backend''; npm install\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem ''C:\\\\Program Files\\\\nodejs'' -ErrorAction SilentlyContinue; Get-ChildItem ''C:\\\\Users\\\\rael_\\\\AppData\\\\Roaming\\\\nvm'' -ErrorAction SilentlyContinue | Select-Object -First 5\")",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "Bash(npm --version)",
+      "Bash(npm install:*)",
+      "Bash(node -e \"require\\(''''/c/Dev/redacao-ia-backend/index.js''''\\)\")",
+      "Bash(node -e \"const app = require\\(''''./index.js''''\\)\")",
+      "Bash(curl -s -X POST http://localhost:3000/submit -H \"Content-Type: application/json\" -d '{\"\"tema\"\":\"\"Teste\"\",\"\"redacao\"\":\"\"Esta é uma redação de teste com mais de cinquenta caracteres para verificar o erro.\"\"}')",
+      "Bash(pkill -f \"node index.js\")",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //F //PID 11792)"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "source": "Casos de borda para testes de validação de input",
+    "nota": "Esses casos testam o comportamento do backend para inputs inválidos ou extremos. A maioria deve retornar 400 antes de chegar à IA."
+  },
+  "branco": [
+    {
+      "id": "EDGE-01",
+      "descricao": "Texto completamente vazio",
+      "tema": "A invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+      "texto": "",
+      "comportamento_esperado": "400 — campo obrigatório ausente ou texto muito curto"
+    },
+    {
+      "id": "EDGE-02",
+      "descricao": "Texto com apenas espaços",
+      "tema": "A invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+      "texto": "   ",
+      "comportamento_esperado": "400 — após trim(), texto vazio ou muito curto"
+    },
+    {
+      "id": "EDGE-03",
+      "descricao": "Texto com apenas quebras de linha",
+      "tema": "A invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+      "texto": "\n\n\n",
+      "comportamento_esperado": "400 — após trim(), texto vazio ou muito curto"
+    }
+  ],
+  "curto": [
+    {
+      "id": "EDGE-04",
+      "descricao": "Texto com uma única frase (abaixo do mínimo de 50 caracteres)",
+      "tema": "A invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+      "texto": "A educação é importante para o Brasil.",
+      "comportamento_esperado": "400 — texto com menos de 50 caracteres"
+    },
+    {
+      "id": "EDGE-05",
+      "descricao": "Texto curto mas acima do limite mínimo de caracteres (deve chegar à IA)",
+      "tema": "A invisibilidade do trabalho de cuidado realizado pela mulher no Brasil",
+      "texto": "A sociedade precisa mudar. O governo deve agir para resolver os problemas sociais do Brasil urgentemente.",
+      "comportamento_esperado": "200 — chega à IA; espera-se C1=0 ou C1=40 (menos de 7 linhas)"
+    }
+  ],
+  "sem_tema": [
+    {
+      "id": "EDGE-06",
+      "descricao": "Campo tema ausente",
+      "tema": null,
+      "texto": "A educação é o principal pilar do desenvolvimento humano e social.",
+      "comportamento_esperado": "400 — campo 'tema' obrigatório"
+    }
+  ],
+  "sem_autenticacao": [
+    {
+      "id": "EDGE-07",
+      "descricao": "Requisição sem token de autenticação",
+      "tema": "Qualquer tema",
+      "texto": "Texto qualquer para teste de autenticação sem token válido.",
+      "comportamento_esperado": "401 — token de autenticação ausente"
+    },
+    {
+      "id": "EDGE-08",
+      "descricao": "Requisição com token inválido",
+      "tema": "Qualquer tema",
+      "texto": "Texto qualquer para teste de autenticação com token inválido.",
+      "comportamento_esperado": "401 — token inválido ou expirado"
+    }
+  ]
+}
