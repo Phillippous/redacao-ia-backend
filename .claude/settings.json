@@ -14,7 +14,8 @@
       "Bash(curl -s -X POST http://localhost:3000/submit -H \"Content-Type: application/json\" -d '{\"\"tema\"\":\"\"Teste\"\",\"\"redacao\"\":\"\"Esta é uma redação de teste com mais de cinquenta caracteres para verificar o erro.\"\"}')",
       "Bash(pkill -f \"node index.js\")",
       "Bash(netstat -ano)",
-      "Bash(taskkill //F //PID 11792)"
+      "Bash(taskkill //F //PID 11792)",
+      "Bash(ls /c/Dev/redacao-ia-backend/*.md)"
     ]
   }
 }

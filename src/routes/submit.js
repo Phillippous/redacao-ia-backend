@@ -4,21 +4,39 @@ const router = express.Router();
 const { evaluateEssay } = require('../services/claude');
 const { saveSubmission } = require('../services/supabase');
 const { requireAuth } = require('../middleware/auth');
+const submissionLimiter = require('../middleware/rateLimit');
 
-router.post('/', requireAuth, async (req, res) => {
+const MAX_REDACAO_LENGTH = 10_000;
+
+// Removes null bytes and ASCII control characters (keeps \n, \r, \t)
+function sanitizeText(str) {
+  if (typeof str !== 'string') return str;
+  return str.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F\uFEFF]/g, '');
+}
+
+router.post('/', requireAuth, submissionLimiter, async (req, res) => {
   const { tema, redacao } = req.body;
 
   if (!tema || !redacao) {
     return res.status(400).json({ error: 'Os campos "tema" e "redacao" são obrigatórios.' });
   }
 
-  if (typeof redacao !== 'string' || redacao.trim().length < 50) {
+  const temaLimpo = sanitizeText(String(tema)).trim();
+  const redacaoLimpa = sanitizeText(String(redacao)).trim();
+
+  if (redacaoLimpa.length < 50) {
     return res.status(400).json({ error: 'A redação deve ter pelo menos 50 caracteres.' });
+  }
+
+  if (redacaoLimpa.length > MAX_REDACAO_LENGTH) {
+    return res.status(400).json({
+      error: `A redação deve ter no máximo ${MAX_REDACAO_LENGTH.toLocaleString('pt-BR')} caracteres.`,
+    });
   }
 
   let resultado;
   try {
-    resultado = await evaluateEssay(tema.trim(), redacao.trim());
+    resultado = await evaluateEssay(temaLimpo, redacaoLimpa);
   } catch (err) {
     console.error('Erro ao chamar Claude:', err);
     return res.status(502).json({ error: 'Falha ao processar a redação com IA.' });
@@ -31,8 +49,8 @@ router.post('/', requireAuth, async (req, res) => {
   try {
     saved = await saveSubmission({
       user_id: req.user.id,
-      tema: tema.trim(),
-      redacao: redacao.trim(),
+      tema: temaLimpo,
+      redacao: redacaoLimpa,
       resultado,
       nota_total,
     });

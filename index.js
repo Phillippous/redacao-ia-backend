@@ -1,7 +1,6 @@
 // Entry point: initializes Express app, loads middleware and routes
 require('dotenv').config();
 const express = require('express');
-const limiter = require('./src/middleware/rateLimit');
 const submitRoute = require('./src/routes/submit');
 const authRoute = require('./src/routes/auth');
 const { requireAuth } = require('./src/middleware/auth');
@@ -10,6 +9,9 @@ const { getSubmissionsByUser } = require('./src/services/supabase');
 const cors = require('cors');
 
 const app = express();
+
+app.disable('x-powered-by');
+
 app.use(cors({
   origin: [
     'http://localhost:3000',
@@ -20,8 +22,15 @@ app.use(cors({
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+
+app.use((_req, res, next) => {
+  res.set('X-Content-Type-Options', 'nosniff');
+  res.set('X-Frame-Options', 'DENY');
+  res.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  next();
+});
+
 app.use(express.json());
-app.use(limiter);
 
 app.use('/auth', authRoute);
 app.use('/submit', submitRoute);
