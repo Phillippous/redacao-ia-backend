@@ -2,6 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const submitRoute = require('./src/routes/submit');
+const ocrRoute = require('./src/routes/ocr');
 const authRoute = require('./src/routes/auth');
 const { requireAuth } = require('./src/middleware/auth');
 const supabase = require('./src/services/supabase');
@@ -34,6 +35,7 @@ app.use(express.json());
 
 app.use('/auth', authRoute);
 app.use('/submit', submitRoute);
+app.use('/ocr', ocrRoute);
 
 app.get('/submissions', requireAuth, async (req, res) => {
   try {

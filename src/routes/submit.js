@@ -5,14 +5,9 @@ const { evaluateEssay } = require('../services/claude');
 const { saveSubmission } = require('../services/supabase');
 const { requireAuth } = require('../middleware/auth');
 const submissionLimiter = require('../middleware/rateLimit');
+const { sanitizeText } = require('../utils/sanitize');
 
 const MAX_REDACAO_LENGTH = 10_000;
-
-// Removes null bytes and ASCII control characters (keeps \n, \r, \t)
-function sanitizeText(str) {
-  if (typeof str !== 'string') return str;
-  return str.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F\uFEFF]/g, '');
-}
 
 router.post('/', requireAuth, submissionLimiter, async (req, res) => {
   const { tema, redacao } = req.body;
