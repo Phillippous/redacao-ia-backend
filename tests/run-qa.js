@@ -183,17 +183,9 @@ async function main() {
   for (const mod of filtered) {
     process.stdout.write(`Executando ${mod.id} (${mod.file})... `);
     const result = runModule(mod);
-    result.bloqueiaDeployAndFailed = mod.bloqueiaDeployAndFailed = !result.passed && mod.bloqueiaDeployAndFailed;
-    // Recalculate
-    result.bloqueiaDeployAndFailed = !result.passed && mod.bloqueiaDeployAndFailed;
+    result.bloqueiaDeployAndFailed = !result.passed && mod.bloqueiaDeploy;
     results.push(result);
     console.log(result.passed ? 'OK' : 'FALHOU');
-  }
-
-  // Recalculate bloqueiaDeployAndFailed based on results
-  for (const r of results) {
-    const mod = MODULES.find(m => m.id === r.id);
-    r.bloqueiaDeployAndFailed = !r.passed && (mod ? mod.bloqueiaDeployAndFailed : false);
   }
 
   const exitCode = printReport(results);

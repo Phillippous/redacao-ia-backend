@@ -1,5 +1,5 @@
 // Entry point: initializes Express app, loads middleware and routes
-require('dotenv').config();
+require('dotenv').config({ override: true });
 const express = require('express');
 const submitRoute = require('./src/routes/submit');
 const ocrRoute = require('./src/routes/ocr');
